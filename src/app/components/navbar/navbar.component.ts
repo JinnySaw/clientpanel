@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
 
   isLoggedIn: boolean;
   loggedInUser: string;
-  showRegiser:boolean;
+  showRegister:boolean;
 
   constructor(
     private authService: AuthService,
@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
         this.isLoggedIn = false;
       }
     });
-    this.showRegiser = this.settingsService.getSettings().allowRegistration;
+    this.showRegister = this.settingsService.getSettings().allowRegistration;
   }
 
   onLogoutClick(){
